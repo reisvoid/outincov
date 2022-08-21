@@ -1,0 +1,414 @@
+/* Once Upon a Time in Coventry Website */
+/* Start date: Saturday 12th February 2022 */
+/* Made by Jai Dhaliwal */
+
+/* System Light Mode */
+@media (prefers-color-scheme: light) {
+	body {
+        background-color: #f0f0f0; /* Background colour slightly grey so it is not too bright */
+        color: #353535;} /* Text slightly grey so the contrast is not too jarring */
+
+    h1 {color: color;} /* h1 will appear as default black, all text in light mode will use this colour */
+    h2 {color: #353535} /* h2 has hex colour instead of variable to hide blue/purple hyperlink colour */
+    h3 {color: color;} /* h3 will appear as default black */
+    .menubar {background: rgba(230, 230, 230, 0.7)} /* Menubar will appear as light with blur to give a frosted glass look / vision when you are underwater */
+    .card, .expectation-card, .map-card {box-shadow: 0 0 10px #bbbbbb; color:#353535; background-color: #ffffff;} /* Cards will appear slightly darker than body background */
+    .exp-card {box-shadow: 0 0 10px #bbbbbb} /* Expectations card will have a different shadow colour depending on preferred colour scheme */
+
+    #box1 {color:#FFD773} /* Unused body text styling */
+    #box2 {color:#FFB26B} /* Unused body text styling */
+    #box3 {color:#FF8288} /* Unused body text styling */
+    #box4 {background-color:color} /* Main body text styling */
+}
+
+/* System Dark Mode */
+@media (prefers-color-scheme: dark) {
+	body{
+        background-color: #121212; /* Background colour slightly grey so it is not too dark */
+        color: #f0f0f0;} /* Text slightly grey so the contrast is not too jarring */
+
+    h1 {color: #82C7FF;} /* h1 will add a pop of colour */
+    h2 {color: #f0f0f0} /* h2 has hex colour instead of variable to hide blue/purple hyperlink colour */
+    h3 {color: color;} /* h3 will appear as default white */
+    .menubar {background: rgba(0, 0, 0, 0.7)} /* Menubar will appear as dark with blur to give a frosted glass look / vision when you are underwater */
+    .card, .expectation-card, .map-card {box-shadow: 0 0 10px #000; color:#f0f0f0; background-color: #222222;} /* Cards will appear slightly lighter than body background */
+    .exp-card {box-shadow: 0 0 10px #000} /* Expectations card will have a different shadow colour depending on preferred colour scheme */
+
+    #box1 {background-color:#FFD773;color:white} /* Unused body text styling */
+    #box2 {background-color:#FFB26B;color:white} /* Unused body text styling */
+    #box3 {background-color:#FF8288;color:white} /* Unused body text styling */
+    #box4 {background-color:color} /* Main body text styling */
+}
+
+/* Background treasure map pattern */
+body{background-image: url("images/background.svg");} /* PNG so that background-color can still adjust background colour, less image files */
+
+/* Main scrollbar for the whole website */
+body::-webkit-scrollbar {width: 8px;} /* The thickness of the scrollbar */
+body::-webkit-scrollbar-thumb {background: #FFD773; border-radius:10000px;} /* Colour and roundedness of the scrollbar */
+
+
+
+/* Fonts */
+h1{ margin-left: 0px;
+    margin-top: 0px;
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 60px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-block-end: 16px;}
+h2{ margin-left: 0px;
+    margin-top: 0px;
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    margin-block-end: 0px;}
+h3{ margin-left:0px;
+    margin-top: 0px;
+    font-family: futura-pt-demi, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-block-end: 0px;}
+a{text-decoration: none;}
+/* Text Container */
+.textbox {display:block; margin:auto; width:80%;} 
+
+
+/* Navigation/Menu bar */
+.menubar{
+    top: 0; /* Nav bar will have no space above it */
+    left: 0; /* Nav bar will have no space to the left of it */
+    right: 0; /* Nav bar will have no space to the right of it */
+    padding: 10px 5% 0 5%; /* Elements will appear slightly centered to the nav bar */
+    backdrop-filter:blur(12px); /* Body behind nav bar will be blurred */
+	-webkit-backdrop-filter:blur(12px); /* Body behind nav bar will be blurred (Safari Support) */
+    height: 110px; /* Height of the nav bar */
+    width: 90%; /* 90% width to make up for the 5% padding on the left and right */
+    position: fixed; /* Nav bar will remain at the top of the screen at all times */
+    z-index: 999;} /* Nav bar will appear above all other elements */
+    /* Items on the left side of the sticky nav bar */
+    .menubar-left {
+        float:left; /* Items will appear on the left side of the nav bar */
+        line-height:95px; /* Text will appear vertically aligned */
+        margin: auto 20px auto 20px;} /* Spacing between items */
+    /* Items on the right side of the sticky nav bar */
+    .menubar-right {
+        float:right; /* Items will appear on the right side of the nav bar */
+        line-height:95px; /* Text will appear vertically aligned */
+        margin: auto 20px auto 20px;} /* Spacing between items */
+
+
+/* Hero Viewport */
+.hero {
+    color: #f0f0f0; /* Colour of text will appear white on both light and dark modes */
+    width: 100%; /* Hero image will span the width of the screen */
+    height: 100vh; /* Hero image will appear as size of the window */
+    background-image: url("images/hero.gif"); /* Hero image */
+    margin-bottom: 15px; /* Space between the hero and the text under it */
+    background-attachment: fixed; /* Image will not move while the text above it will, creating a paralax effect */
+    background-position: center; /* Image will remain centered when being cropped */
+    background-repeat: no-repeat; /* Image will not repeat when out of bounds */
+    background-size: cover;
+    -webkit-background-size: cover;} /* Image will span the entire viewport */
+
+
+/* Expectations Viewport */
+.expectations{
+    height: fit-content; /* Height will adjust so that the whole of the card fits into the column */
+    margin: auto; /* Makes cards float in the centre */
+    columns: 2; /* Cards will have 2 columns when viewed on a big enough screen */
+    width: 65%; /* Adds margins to the left and right of the cards to allign it with all other elements */
+    padding-left: 20px; /* Spacing left of viewport */
+    padding-right: 20px; /* Spacing right of viewport */
+    padding-top: 10px; /* Spacing above of caviewportd */
+    padding-bottom: 0px; /* Spacing bellow of viewport */
+    overflow: hidden;} /* Removes random spacing that can sometimes appear from the columns */
+    .expectation-card{
+        height: fit-content; /* Height of card will adjust so that the text fits in the card */
+        width: 100%; /* Card will take up whole of column */
+        margin-right: 16px; /* Space between cards */
+        margin-bottom: 16px; /* Space between cards */
+        margin-block-end: 12px; /* Space at end of cards */
+        border-radius: 10px;} /* Roundedness of cards */
+        div.expectation-card>img {
+            width: 100%; /* Image will use entire width of card */
+            object-fit: cover; /* Image will not stretch */
+            border-top-left-radius: 10px; /* Top corners will be rounded */
+            border-top-right-radius: 10px;} /* Top corners will be rounded */
+        div.expectation-card>h3 {
+            padding: 16px; /* Area around text */
+            padding-left: 20px; /* Area around text */
+            padding-right: 20px; /* Area around text */
+            margin-block-end: 0px;} /* Area bellow last line of text */
+
+
+/* Experiences Viewport */
+.exp-card{
+    position: relative; /* Keeps cards inline */
+    overflow: hidden; /* Image will only show within the card, image will auto crop */
+    margin: auto; /* Makes cards float in the centre */
+    height: 500px; /* Height of the card */
+    width: 65%; /* Width of the card */
+    margin-bottom: 32px; /* Area between cards */
+    margin-top: 32px; /* Area between cards */
+    border-radius: 10px;} /* Roundedness of cards */
+    div.exp-card>img {
+        height: 100%; /* Image will use whole card */
+        width: 100%; /* Image will use whole card */
+        object-fit: cover; /* Image will not stretch */
+        position: absolute; /* Allows .image-caption to appear above image */
+        transition: all 300ms ease-in-out;} /* Blur and scale animation */
+    .exp-card:hover {
+        animation-play-state: paused;
+        transform: scale(1.07); /* Scale card */
+        box-shadow: 0 0 10px #82C7FF; /* Make card glow */
+        transition: 0.2s;} /* Animation time */
+    .image-caption {
+        width: 100%; /* Text will use whole card */
+        height: 100%; /* Text will use whole card */
+        background: rgba(130, 199, 255, 0.6); /* Background will turn more blue to make text legible */
+        position: absolute; /* Allows .image-caption to appear above image */
+        opacity: 0; /* Hidden until hovered over */
+        transition: all 300ms ease-in-out; /* Animation time */
+        display: flex; /* Aligns text to columns (was an accident but I liked the results so I kept it */
+        align-items: center;} /* Vertical centre alignment */
+    div.image-caption>h1, div.image-caption>h3 {color: #121212; padding: 6%;} /* Text colour and padding */
+    .exp-card:hover .image-caption {opacity: 1;} /* Hidden until hovered over */
+    .exp-card:hover img {filter: blur(8px);} /* Background will blur to make text legible */
+
+
+/* Time and Information Viewports */
+.timeinfo{
+    margin: auto; /* Centre aligns text */
+    columns: 2; /* Column count */
+    width: 78%; /* Horizontal margins */
+    padding-top: 10px; /* Spacing */
+    padding-bottom: 0px; /* Spacing */
+    margin-bottom: 0px;} /* Spacing */
+
+
+/* Merchandise Viewport */
+.shop{
+    margin: auto; /* Centre aligns viewport */
+    width: 80%; /* Horizontal margins */
+    overflow-x: scroll; /* Makes shop scrollable along the x-axis */
+    padding-left: 20px; /* Spacing */
+    padding-right: 20px; /* Spacing */
+    padding-top: 10px; /* Spacing */
+    padding-bottom: 10px; /* Spacing */
+    white-space: nowrap;} /* Makes shop scrollable along the x-axis */
+    .shop::-webkit-scrollbar {height: 8px;} /* The thickness of the scrollbar */
+    .shop::-webkit-scrollbar-thumb {background: #FFD773; border-radius:10000px;} /* Colour and roundedness of the scrollbar */
+    .card{
+        display: inline-block; /* Cards appear horizontally */
+        height: 380px; /* Card height */
+        width: 300px; /* Card width */
+        margin-right: 16px; /* Spacing */
+        margin-bottom: 16px; /* Spacing */
+        margin-top: 16px; /* Spacing */
+        border-radius: 10px;} /* Roundedness */
+        div.card>img {
+            height: 300px; /* Image height */
+            width: 300px; /* Image width */
+            border-top-left-radius: 10px; /* Roundedness */
+            border-top-right-radius: 10px;} /* Roundedness */
+        div.card>h3 {
+            padding: 16px; /* Spacing */
+            padding-left: 20px; /* Spacing */
+            padding-right: 20px; /* Spacing */
+            margin-block-end: 0px;} /* Spacing */
+        .card:hover {
+            animation-play-state: paused;
+            transform: scale(1.07); /* Scale card */
+            box-shadow: 0 0 10px #82C7FF; /* Make card glow */
+            background-color: #82C7FF; /* Highlight card */
+            color: #000; /* Change text colour to be more readable */
+            transition: 0.2s; /* Animation time */
+            cursor: pointer;}
+
+
+/* Map Viewport */
+.map {
+    height: fit-content; /* Map will use as much space as needed */
+    margin: auto; /* Centre align */
+    width: 65%; /* Horizontal margins */
+    padding-left: 20px; /* Spacing */
+    padding-right: 20px; /* Spacing */
+    padding-top: 10px; /* Spacing */
+    padding-bottom: 10px;} /* Spacing */
+    .map img{
+        width: 100%; /* Map will use 100% of the 65% width of the div it is nested in */
+        border-radius: 10px;} /* Roundedness */
+    .map-card{
+        height: 100%; /* Fit whole of map */
+        border-radius: 10px;} /* Roundedness */
+    .map-card:hover {
+        animation-play-state: paused;
+        transform: scale(1.25); /* Scale map */
+        box-shadow: 0 0 10px #82C7FF; /* Make map glow */
+        transition: 0.2s; /* Animation time */
+        cursor: pointer;}
+
+
+/* Mobile */
+@media only screen and (max-width: 900px) {
+
+    .menubar{padding: 10px 2% 0px 2%; width: 96%;}
+
+    /* Items on left side of menubar disappear when entering mobile mode so everything fits on the width of the screen */
+    .menubar-left{display:none}
+
+    /* The spacing between the logo and the items on the left of the menubar is not required as those items disappear when in mobile mode */
+    .spacing{display: none}
+
+    /* Reduced padding on mobile to fit text better */
+    h3{ padding-left: 5%;
+        padding-right: 5%;}
+    h1{ margin-left: 0px;
+        margin-top: 0px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 36px;}
+    
+    /* Reduced margins on mobile to fit viewports better */
+    .timeinfo{width:100%; display: grid;} /* Removes columns, now appears bellow */
+    .expectations{width:90%; display: grid;} /* Removes columns, now appears bellow */
+    .image-caption {display: block;} /* Removes columns, now appears bellow */
+    .textbox{width:100%}
+    .shop{width: 93%;}
+    .map{width: 90%}
+    .exp-card{width: 90%;}
+    .hero {background-attachment: initial;}
+}
+
+
+/* Call to action button */
+.cta{
+    background-color: #FFD773; /* Colour of button */
+    color: rgb(0, 0, 0); /* Colour of text in button */
+    height: 50px; /* Height of button remains constant */
+    width: fit-content; /* Width of button will scale according to volume of text */
+    margin: auto; /* Button will appear alligned centre of the screen */
+    padding: 15px; /* Space around inside of button, text will not touch edge of button */
+    padding-bottom: 0px; /* Bottom space inside of button */
+    border-radius: 6px; /* Corners of button will be rounded */
+    margin-bottom: 10px;} /* Space under button */
+    /* Changes to .cta div when button is being hovered over */
+    div.cta:hover{
+        background-color: #FFB26B; /* Colour of button, darker than original colour */
+        transform: scale(1.2); /* Button will become bigger when hovered over */
+        transition: 0.3s;} /* Scale will be animated for 0.3 seconds */
+
+
+/* Animates change of image in the merch viewport */
+@keyframes fling-minislide {50%{opacity:1;} 50%{opacity:0;}} 
+.fling-minislide img:nth-child(2){animation-delay:0s;}
+.fling-minislide img:nth-child(1){animation-delay:5s;}
+.fling-minislide {
+    width: 300px;
+    height: 305px;
+    overflow: hidden;
+    position: relative;}
+.fling-minislide img{
+    position: absolute;
+    animation: fling-minislide 10s infinite;
+    opacity: 100%;}
+
+
+/* Footer */
+/* Some lines of code may be repeated so that this set of code will work */
+/* With all group members' websites */
+
+/* Fonts */
+/* f1, f2, f3 was used to avoid the font styles clashing with other group members' h1, h2, h3 */
+footer f2{
+    color: #f0f0f0;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 161.8%;}
+footer f3{
+    font-family: futura-pt-demi, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    margin-block-end: 6.4px;}
+footer f1{
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-block-end: 16px;}
+
+/* Display block appears in the CSS so that it can be changed when the window shrinks to mobile view */
+footer .footercontainer{display: block;}
+
+/* .div for each individual column */
+footer .textbox{
+    margin:auto; /* Spacing so buttons and text wont touch edge of the viewport */
+    width:80%; /* Spacing so buttons and text wont touch edge of the viewport */
+    margin-block-end: 50px; /* Space under the title text */
+}
+
+/* Call to action button */
+footer .button{
+    background-color: #ffffff; /* Colour of button */
+    color: rgb(0, 0, 0); /* Colour of text in button */
+    height: 40px; /* Height of button remains constant */
+    padding-top: 15px; /* Top space inside of button to even out the vertical spacing */
+    border-radius: 6px; /* Corners of button will be rounded */
+    margin: 10px 0px 10px 0px; /* Vertical spacing between buttons */
+    text-align: center; /* Text will be alligned to the centre of the button */
+}
+    /* Changes to .cta div when button is being hovered over */
+    footer div.button:hover{
+        color: white; /* Colour of button */
+        transform: scale(1.07); /* Button will become bigger when hovered over */
+        transition: 0.3s; /* Scale will be animated for 0.3 seconds */
+    }
+
+/* Mobile */
+@media only screen and (max-width: 1025px){
+    footer .footercontainer{display: grid;} /* Footer will appear as a list as the columns wouldn't fit on a small window */
+    footer .textbox{width:95%;} /* Lowers the horizontal margins so text can fit comfortably */
+    footer .button{margin-left: 24px; margin-right: 24px;} /* Button stays on screen even when hovered on */
+}
+
+footer {background-color: #121212;} /* Footer Background Colour */
+footer a{text-decoration: none;} /* Text will not be underlined like a hyperlink */
+
+#footer1{color:#f0f0f0; background-color: #121212;} /* Styling for title for the footer */
+#footer2{background-color:#121212; color:#f0f0f0; break-inside: avoid-column; height: auto;} /* Styling for individual columns */
+
+/* All buttons are white when not hovered */
+/* When hovered, buttons change to their respective colours */
+#twitter:hover   {background-color:#00acee;color:rgba(255,255,255,0.75)}
+#facebook:hover  {background-color:#3b5998;color:rgba(255,255,255,0.75)}
+#instagram:hover {background-color:#E1306C;color:rgba(255,255,255,0.75)}
+#spring:hover    {background-color:#84FBAA;color:rgba(0,0,0,0.6)} 
+#summer:hover    {background-color:#FFD773;color:rgba(0,0,0,0.6)}
+#autumn:hover    {background-color:#FFB26B;color:rgba(0,0,0,0.6)}
+#winter:hover    {background-color:#82c7ff;color:rgba(0,0,0,0.6)}
+#brand:hover     {background-color:#ff82c7;color:white}
+#culture:hover   {background-color:#437cff;color: white}

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<!-- Once Upon a Time in Coventry Website -->
+<!-- Start date: Saturday 12th February 2022 -->
+<!-- Made by Divine Igbinosa -->
+
+<!-- Scales down website for mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<html>    
+    <head>
+        <!-- Adobe Fonts -->
+        <link rel="stylesheet" href="https://use.typekit.net/uqp5fkw.css">
+
+        <!-- Light Theme, Dark Theme, Text Style, Basically Everything -->
+        <link rel="stylesheet" href="theme.css">
+
+        <!-- Tab Title and Dynamic Favicon with dark mode support -->
+        <title>OUT in Cov</title>
+        
+        <!-- Use black favicon when there is no preference given by the browser, most browsers are light themed anyway -->
+        <link rel="icon" href="icons/favicon-black.svg" media="(prefers-color-scheme:no-preference)">
+        
+        <!-- Use white favicon when in dark mode so favicon is visible -->
+        <link rel="icon" href="icons/favicon-white.svg" media="(prefers-color-scheme:dark)">
+        
+        <!-- Use black favicon when in light mode so favicon is visible -->
+        <link rel="icon" href="icons/favicon-black.svg" media="(prefers-color-scheme:light)">
+
+        <!-- Sticky Header -->
+        <div class="menubar">
+
+                <!-- Pin logo to the left side of the header with a fixed size of 100px x and y -->
+                <div style="height:100px;width:100px;float:left;">
+
+                    <!-- Dynamic Logo with dark mode support -->
+                    <picture>
+
+                        <!-- If dark mode is enabled, use white logo -->
+                        <source style="height:100%;width:100%" srcset="icons/logo-white.svg" media="(prefers-color-scheme: dark)">
+                        
+                        <!-- Otherwise use white logo -->
+                        <img style="height:100%;width:100%" src="icons/logo-black.svg" alt="OUT IN COV logo">
+                    </picture>
+                
+                </div>
+                <!-- Spacing between Logo and Tagline -->
+                <div class="spacing" style="height:100px;width:24px;float:left;line-height:95px;">
+                </div>
+
+                <!-- Tagline -->
+                <!-- Span used to color each word individually as the h2 style already has a color -->
+                <!-- Word colors don't need to change based on theme as they appear visible on both light and dark background -->
+                <div class="menubar-left">
+                    <a href="#"><h2><span style="color:#FF8288"> Uncover </span></h2></a>
+                </div>
+                <div class="menubar-left">
+                    <a href="#"><h2><span style="color:#FFB26B"> Coventry's </span></h2></a>
+                </div>
+                <div class="menubar-left">
+                    <a href="#"><h2><span style="color:#FFD773"> Jewels </span></h2></a>
+                </div>
+
+                <!-- Action buttons -->
+                <!-- Pinned to the right side of the menubar-->
+                <div class="menubar-right">
+                    <a href="#dateandtime"><h2>Info</h2></a>
+                </div>
+                <div class="menubar-right">
+                    <a href="#map"><h2>Map</h2></a>
+                </div>
+    </div>
+    </head>
+    <body>
+
+            <!-- Spacing on body so sticky header doesnt cover the body -->
+            <div class="box4" style="height:112px;width:100%;">
+            </div>
+            
+            <!-- Example notice text -->
+            <!-- <div style="background-color:#FF8288;height:45;float:center;text-align:center;">
+                <h3>WEBSITE IS CURRENTLY WORK IN PROGRESS</h3>
+            </div> -->
+
+            <!-- Spacing -->
+            <div style="height:20;float:center;">
+            </div>
+            
+            <!-- Content -->
+            
+            <!-- Hero Viewport -->
+            <section id="hero">
+                <div class="hero">
+                    <div class="textbox" id="box4">
+                        <h1><br>Welcome to Once Upon a Time in Coventry</h1>
+                        <h3>The only festival you want to visit in the heart of Coventry. <br><br><br><br><br><br><br><br><br><br><br><br></h3>
+                        <a href="#experience1">
+                            <div class="cta">
+                                <h2><span style="color:#000000">Join Us</span></h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Introduction Viewport -->
+            <section id="intro">
+                <div class="textbox" id="box4">
+                    <h3>Once Upon a Time in Coventry is a festival celebrating the grand reveal of River Sherbourne. 
+                        Unknown to many, River Sherbourne has always been quietly running through Coventry however a 
+                        river with such pride and history behind it should be known to the public. Palmer Lane is 
+                        one of Coventry’s oldest streets and it deserves to be recognised. Come visit us today! </h3>
+                </div>
+            </section>
+            
+
+            <!-- Expectations Viewport -->
+            <section id="expectations">
+                <div class="textbox" id="box4">
+                    <h1>Expectations</h1>
+                </div>
+                <div class="expectations">
+
+                    <!-- Left Column -->
+                    <div style="width:100%; height: fit-content;">
+                        <!-- Expectation -->
+                        <div class="expectation-card"> 
+                            <img src="images/expectation-1.svg" alt="Food">
+                            <h3>Hungry? There are plenty of local food shops to fuel you on your adventure. </h3>
+                        </div>
+                    
+                        <!-- Expectation -->
+                        <div class="expectation-card"> 
+                            <img src="images/expectation-2.svg" alt="River">
+                            <h3>The river is calling, Come visit!</h3>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div style="width:100%; height: fit-content;">
+                        <!-- Expectation -->
+                        <div class="expectation-card"> 
+                            <img src="images/expectation-3.jpg" alt="Activities">
+                            <h3>Plenty activities to do. Go alone, come with a friend or bring your team to have some fun!</h3>
+                        </div>
+
+                        <!-- Expectation -->
+                        <div class="expectation-card"> 
+                            <img src="images/expectation-4.svg" alt="Theatre">
+                            <h3>Come around to watch a play, bring your friends!</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+
+            <!-- Experiences Viewport -->
+            <section id="experiences">
+            <div class="textbox" id="box4">
+                <h1>Experiences</h1>
+            </div>
+
+                <!-- Experience 1 Viewport -->
+                <section id="experience1">
+                    <div class="exp-card"> 
+                        <img src="images/experience-1.svg" alt="Experience 1 - Fishing for Gold">
+                        <div class="image-caption">
+                            <h1>Fishing for Gold</h1>
+                            <h3>Put your skills to the test and fish out jewels in the heart of Coventry. <br><br>Who knows what you might find?</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Experience 2 Viewport -->
+                <section id="experience2">
+                    <div class="exp-card"> 
+                        <img src="images/experience-2.svg" alt="Battle">
+                        <div class="image-caption">
+                            <h1>Prepare for battle!</h1>
+                            <h3>Fit the theme! <br><br>Dress up as a menacing pirate and defeat your foes in this intense battle to save Coventry. <br><br>Use water guns to blast your way through hordes of enemies. </h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Experience 3 Viewport -->
+                <section id="experience3">
+                    <div class="exp-card"> 
+                        <img src="images/experience-3.svg" alt="Experience 3 - Treasure Hunt">
+                        <div class="image-caption">
+                            <h1>Treasure Hunt</h1>
+                            <h3>Participate in working as a team to solve riddles and follow clues to uncover some of Coventry’s hidden treasure. 
+                            <br><br>
+                            This is your chance to socialise and make new friends!
+                            <br><br>
+                            Will you be the one to find Coventry’s treasure?</h3>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+
+            <!-- Time and Information Viewport -->
+            <section id="dateandtime">
+                <div class="timeinfo">
+
+                    <!-- Left Column - Information -->
+                    <div style="width:100%; height: fit-content; break-inside: avoid;">
+                        <div class="textbox" id="box4">
+                            <h1>Info</h1>
+                            <h3>Expectations and experiences may vary depending on the festival season. Open times may vary on weather and season. Please stay safe when around the river. </h3>
+                        </div>
+                    </div>
+
+
+                    <!-- Right Column - Time -->
+                    <div style="width:100%; height: fit-content;break-inside: avoid;">
+                        <div class="textbox" id="box4">
+                            <h1>Times</h1>
+                            <h3>Monday: 08:00 - 18:00<br>
+                                Tuesday: 08:00 - 18:00<br>
+                                Wednesday: 08:00 - 18:00<br>
+                                Thursday: 08:00 - 18:00<br>
+                                Friday: 08:00 - 18:00<br>
+                                Saturday: 08:00 - 18:00<br>
+                                Sunday: 08:00 - 18:00<br></h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Merchandise Viewport -->
+            <section id="merchandise">
+                <div class="textbox" id="box4">
+                    <h1>Merchandise</h1>
+                </div>
+
+                <div class="shop">
+
+                        <div class="card"> 
+                            <div class="fling-minislide">
+                                <img src="shop/tote-night.png" alt="">
+                                <img src="shop/tote-day.png" alt="">
+                            </div>
+                            <h3>Day/Night Tote<br>£6.99</h3>
+                        </div>
+
+                        <div class="card">
+                            <div class="fling-minislide">
+                                <img src="shop/sticker-blackwhite.png" alt="black on white sticker">
+                                <img src="shop/sticker-blackwhite-1.png" alt="black on white sticker">
+                            </div>
+                            <h3>Black on White Sticker<br>£4.99</h3>
+                        </div>
+
+                        <div class="card">
+                            <div class="fling-minislide">
+                                <img src="shop/sticker-whiteblack.png" alt="white on black sticker">
+                                <img src="shop/sticker-whiteblack-1.png" alt="white on black sticker">
+                            </div>
+                            <h3>White on Black Sticker<br>£4.99</h3>
+                        </div>
+
+                        <div class="card"> 
+                            <img src="shop/sticker-summer.png" alt="summer stickers 4 pack">
+                            <h3>Summer Sickers (4 Pack)<br>£6.99</h3>
+                        </div>
+
+                        <div class="card"> 
+                            <img src="shop/sticker-brand.png" alt="out in cov stickers 4 pack">
+                            <h3>OUT in Cov Sickers (4 Pack)<br>£6.99</h3>
+                        </div>
+
+                        <div class="card"> 
+                            <img src="shop/sticker-horizonday.png" alt="horizon sticker">
+                            <h3>Horizon Day Sticker<br>£6.99</h3>
+                        </div>
+
+                        <div class="card"> 
+                            <img src="shop/sticker-horizonnight.png" alt="horizon sticker">
+                            <h3>Horizon Night Sticker<br>£6.99</h3>
+                        </div>
+
+                        <div class="card">
+                            <div class="fling-minislide">
+                                <img src="shop/sticker-horizon.png" alt="horizon sticker">
+                                <img src="shop/sticker-horizon-1.png" alt="horizon sticker">
+                            </div>
+                            <h3>Horizon Sticker<br>£6.99</h3>
+                        </div>
+
+                        <div class="card"> 
+                            <img src="shop/tee-white.png" alt="simple white tee">
+                            <h3>Simple White Tee<br>£6.99</h3>
+                        </div>
+
+                        <div class="card"> 
+                            <img src="shop/tee-sunset.png" alt="river sunset tee">
+                            <h3>River Sunset Tee<br>£8.99</h3>
+                        </div>
+
+                        <div class="card"> 
+                            <img src="shop/tee-black.png" alt="simple black tee">
+                            <h3>Simple Black Tee<br>£6.99</h3>
+                        </div>
+
+                        <div class="card"> 
+                            <img src="shop/tote-armoury.png" alt="a tote bag with two swords">
+                            <h3>Armoury Tote<br>£4.99</h3>
+                        </div>
+
+                        <div class="card"> 
+                            <img src="shop/tote-sunset.png" alt="river sunset tote">
+                            <h3>River Sunset Tote<br>£4.99</h3>
+                        </div>
+
+                </div>
+            </section>
+            
+            <!-- Map Viewport -->
+            <section id="map">
+                <div class="textbox" id="box4">
+                    <h1>Map</h1>
+                </div>
+
+                <div class="map">
+                    <div class="map-card">
+                        <img src="images/map.png">
+                    </div>
+                </div>
+            </section>
+
+    </body>
+    <footer>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.typekit.net/uqp5fkw.css">
+        <link rel="stylesheet" href="theme.css">
+        <div class="textbox" id="footer1">
+            <f1>Once Upon a Time in Coventry</f1>
+        </div>
+        <div class="footercontainer" style="margin:auto;columns:4">
+
+            <!-- Website Links buttons -->
+            <div class="textbox" id="footer2">
+                <f2>Website Links</f2>
+                <a href="#hero">
+                    <div class="button" id="brand">
+                        <f3>Hero</f3>
+                    </div>
+                </a>
+                <a href="#intro">
+                    <div class="button" id="brand">
+                        <f3>Intro</f3>
+                    </div>
+                </a>
+                <a href="#expectations">
+                    <div class="button" id="brand">
+                        <f3>Expectations</f3>
+                    </div>
+                </a>
+                <a href="#dateandtime">
+                    <div class="button" id="brand">
+                        <f3>Date & Time</f3>
+                    </div>
+                </a>
+                <a href="#experiences">
+                    <div class="button" id="brand">
+                        <f3>Experiences</f3>
+                    </div>
+                </a>
+                <a href="#merchandise">
+                    <div class="button" id="brand">
+                        <f3>Merchandise</f3>
+                    </div>
+                </a>
+                <a href="#map">
+                    <div class="button" id="brand">
+                        <f3>Map</f3>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Social Media buttons -->
+            <div class="textbox" id="footer2">
+                <f2>Follow Us</f2>
+                <a href="https://www.instagram.com">
+                    <div class="button" id="instagram">
+                        <f3>Instagram</f3>
+                    </div>
+                </a>
+                <a href="https://www.facebook.com">
+                    <div class="button" id="facebook">
+                        <f3>Facebook</f3>
+                    </div>
+                </a>
+                <a href="https://www.twitter.com">
+                    <div class="button" id="twitter">
+                        <f3>Twitter</f3>
+                    </div>
+                </a>
+                <f2>Call Us</f2>
+                <a href="tel://0123456789">
+                    <div class="button" id="brand">
+                        <f3>0123456789</f3>
+                    </div>
+                </a>
+                <f2>Email</f2>
+                <a href="mailto://example@outincov.co.uk">
+                    <div class="button" id="brand">
+                        <f3>example@outincov.co.uk</f3>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Season buttons -->
+            <div class="textbox" id="footer2">
+                <f2>Seasons</f2><br>
+                <f3>We are open all year round!</f3>
+                <a href="#">
+                    <div class="button" id="spring">
+                        <f3>Spring</f3>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="button" id="summer">
+                        <f3>Summer</f3>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="button" id="autumn">
+                        <f3>Autumn</f3>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="button" id="winter">
+                        <f3>Winter</f3>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Find Us and City of Culture buttons -->
+            <div class="textbox" id="footer2">
+                <f2>Find Us</f2><br>
+                <f3>River Sherbourne<br>Coventry<br>England<br>CV1 1FN</f3>
+                <a href="https://goo.gl/maps/sLcV3EjE5PqV5ojw9">
+                    <div class="button" id="brand">
+                        <f3>Google Maps</f3>
+                    </div>
+                </a>
+                <f2>Copyright</f2><br>
+                <f3>2021 Coventry<br>UK City Of Culture<br>coventry2021.co.uk</f3>
+                <a href="https://coventry2021.co.uk">
+                    <div class="button" id="culture">
+                        <f3>City of Culture</f3>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- Spacing at bottom of footer so that buttons do not touch the bottom of the window -->
+        <div style="background-color:#121212;padding-bottom:50px;"></div>
+
+    </footer>
+</html>
